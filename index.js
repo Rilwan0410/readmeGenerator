@@ -137,7 +137,7 @@ For any additional questions, my gitHub account is https://github.com/${
 ${answers.license ? answers.license : "N/A"}
       `;
 
-    writeToFile("./MyREADME.md", readMeData);
+    writeToFile("./README.md", readMeData);
   });
 
 // TODO: Create a function to write README file
