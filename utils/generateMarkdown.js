@@ -10,6 +10,10 @@ function renderLicenseLink(license) {}
 // If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
+function addUsage(text){
+  return 
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
@@ -17,4 +21,10 @@ function generateMarkdown(data) {
 `;
 }
 
-module.exports = generateMarkdown;
+const functions = {
+  renderLicenseBadge,
+  renderLicenseLink,
+  generateMarkdown,
+};
+
+module.exports = functions;

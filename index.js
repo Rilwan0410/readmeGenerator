@@ -1,7 +1,9 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown.js");
+const generateMarkdownExports = require("./utils/generateMarkdown.js");
+const { renderLicenseBadge, renderLicenseLink, generateMarkdown } =
+  generateMarkdownExports;
 
 // TODO: Create an array of questions for user input
 const questions = [];
@@ -14,30 +16,125 @@ inquirer
     },
     {
       type: "input",
-      name: "description",
-      message: "What will be the description for your project?",
+      name: "motivation",
+      message:
+        "What was your motivation to create this project? (my motivation for creating this project is...)",
+    },
+    {
+      type: "input",
+      name: "why",
+      message:
+        "Why did you build this project? (I created this project because...)",
+    },
+    {
+      type: "input",
+      name: "problemSolved",
+      message:
+        "In your own words, what problem is this project solving? (I believe the problem this project is solving is...)",
+    },
+    {
+      type: "input",
+      name: "whatYouLearned",
+      message:
+        "What did you learn from creating this project? (I learned many things from creating this project such as...)",
+    },
+    {
+      type: "input",
+      name: "standOut",
+      message:
+        "What makes your project stand out? (What makes my projects stand is...)",
+    },
+    {
+      type: "input",
+      name: "problemSolved",
+      message:
+        "In your own words, what problem is this project solving? (I believe this project is solving problems such as...)",
+    },
+    {
+      type: "input",
+      name: "installation",
+      message: "How do you go about installing the application?",
+    },
+    {
+      type: "input",
+      name: "usage",
+      message:
+        "How do you go about using the application? Leave blank if not applicable",
+    },
+    {
+      type: "input",
+      name: "contribution",
+      message:
+        "Were there any contribution to your project? Leave blank if not applicable",
+    },
+    {
+      type: "input",
+      name: "license",
+      message:
+        "What is the license for your project? Leave blank if not applicable",
+    },
+    {
+      type: "input",
+      name: "tests",
+      message: "Any tests? Leave blank if not applicable",
+    },
+    {
+      type: "input",
+      name: "username",
+      message: "What is your GitHub username?",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is an email where you can be reached?",
     },
   ])
   .then((answers) => {
     const readMeData = `
 # ${answers.projectTitle}
-  
-## Description
-${answers.description}
-  
-## Installation 
-This is how you use the application.
 
 ## Table Of Contents
-information about the table of contents
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#license)
+  
+## Description
+This project is called ${
+      answers.projectTitle
+    }, and my motivation for creating this project is ${
+      answers.motivation
+    }. I created this project because ${
+      answers.why
+    }. I believe the problem this project is solving is ${
+      answers.problemSolved
+    }. I learned many things from creating this project such as ${
+      answers.whatYouLearned
+    }. There are many similar projects like this one, but what makes my rendition of it stand out is that ${
+      answers.standOut
+    }. I believe this project is solving problems such as ${
+      answers.problemSolved
+    }.
+  
+## Installation 
+${answers.installation}
+
 
 ## Usage
-information of the usage
+${answers.usage ? answers.usage : "N/A"}
 
-## Contributing Guidelines
-information for the contributions
+## Contributing
+${answers.contribution ? answers.contribution : "N/A"}
 
-## Test Instructions
+## Tests
+${answers.test ? answers.test : "N/A"}
+
+## Questions
+For any additional questions, my gitHub account is https://github.com/${
+      answers.username
+    } and my Email is ${answers.email}. Feel free to contact me anytime!
+
+## License
+${answers.license ? answers.license : "N/A"}
       `;
 
     writeToFile("./MyREADME.md", readMeData);
