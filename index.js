@@ -135,7 +135,12 @@ For any additional questions, my gitHub account is https://github.com/${
 
 ## License
 ${answers.license ? answers.license : "N/A"}
+
+## Links
+Links to GitHub repository: https://github.com/Rilwan0410/readmeGenerator
+Link to Screencastify recording: https://drive.google.com/file/d/1gFuVt-TQSAmbyTHHS1dQXfnGpgm0AZ_z/view
       `;
+
 
     writeToFile("./README.md", readMeData);
   });

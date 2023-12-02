@@ -7,10 +7,10 @@
 - [License](#license)
   
 ## Description
-This project is called README.md Generator, and my motivation for creating this project is To make it much more simpler to create a README.md file. I created this project because I believe it would be valuable to create a README.md file from your command line instead of having to  alwasys brainstorm the structure of your  README. I believe the problem this project is solving is The hassle of always havint to brainstorm how you are going to create your README.md file, especially when you have already created a full cumbersome project. I learned many things from creating this project such as I learned about inquirer as well as more about the possbilities and features of node. There are many similar projects like this one, but what makes my rendition of it stand out is that the attention to detail that I put in as well as the nuanced features. I believe this project is solving problems such as The hassle of always havint to brainstorm how you are going to create your README.md file, especially when you have already created a full cumbersome project.
+This project is called README.md Generator, and my motivation for creating this project is To make it simple to create a README.md file. I created this project because to make it much more convinient to create a readme file. I believe the problem this project is solving is conveience in createing a readme file. I learned many things from creating this project such as inquirer and node. There are many similar projects like this one, but what makes my rendition of it stand out is that attention to detail and ease of use. I believe this project is solving problems such as conveience in createing a readme file.
   
 ## Installation 
-run node index.js in your terminal command line
+run node index.js in the command line
 
 
 ## Usage
@@ -27,4 +27,8 @@ For any additional questions, my gitHub account is https://github.com/rilwan0410
 
 ## License
 N/A
+
+## Links
+Link to GitHub repository: https://github.com/Rilwan0410/readmeGenerator
+Link to Screencastify recording: https://drive.google.com/file/d/1gFuVt-TQSAmbyTHHS1dQXfnGpgm0AZ_z/view
       
